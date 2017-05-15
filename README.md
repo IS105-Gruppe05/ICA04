@@ -17,9 +17,9 @@ Navnliste: Abdikani Gureye, Brede Knutsen Meli, Eirik Aanestad Fintland, Jan Kev
  O g   e n   t i l   . . . 
  
 ( Bildet til høyre)
-54 65 73 74 65 72 20 6C 69 6E 6A 65 73 6B 69 66 74 2E 0D 0A 4F 67 20 65 6E 20 74 69 6C 20 2E 2E 2E 0D 0A 4F 67 20 65 6E 20 74 69 6C 20 2E 2E 2E 0D 0A 4F 67 20 65 6E 20 74 69 6C 20 2E 2E 2E 0D 0A
+54 65 73 74 65 72 20 6C 69 6E 6A 65 73 6B 69 66 74 2E ##0D ##0A 4F 67 20 65 6E 20 74 69 6C 20 2E 2E 2E ##0D ##0A 4F 67 20 65 6E 20 74 69 6C 20 2E 2E 2E ##0D ##0A## 4F 67 20 65 6E 20 74 69 6C 20 2E 2E 2E ##0D ##0A
 
-[T e s t   r   l i n j e s k i f t . 
+[T e s t e  r   l i n j e s k i f t . 
 
  O g   e n   t i l   . . . 
  
@@ -52,6 +52,12 @@ Bilde for linjeskift windows: Dette er samme fil som i illustrasjonen over. Side
 
 
 
+## Oppgave 2
+## a)
+For å kjøre filinfo filen benyttes flag. Filen tar parameter av ei fil, i vårt tilfelle asdf.txt.
+```
+filinfo.go -f asdf.txt
+```
 
 
 
