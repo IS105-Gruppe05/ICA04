@@ -4,9 +4,8 @@ import (
 	//"fmt"
 	"testing"
 	//"reflect"
-	"time"
 	"math/rand"
-
+	"time"
 )
 
 var liten string = "text1.txt"
@@ -27,30 +26,24 @@ func perm(n int) (out []int) {
 
 func BenchmarkFinnLiten(b *testing.B) {
 	Finn(liten, b)
-	// Output: MOOOO!
 
 }
 
 func BenchmarkFinnMiddels(b *testing.B) {
 	Finn(middels, b)
-	// Output: MOOOO!
 
 }
 
 func BenchmarkFinnStor(b *testing.B) {
 	Finn(stor, b)
-	// Output: MOOOO!
 
 }
 
 func Finn(i string, b *testing.B) {
 	for j := 0; j < b.N; j++ {
 		b.StopTimer()
-		//values := perm(i)
 		b.StartTimer()
 		FinnAlletest(i)
 
 	}
 }
-
-

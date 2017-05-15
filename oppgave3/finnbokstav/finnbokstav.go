@@ -11,7 +11,7 @@ import (
 
 const Items = `ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz.,!?`
 
-func FinnAlle (filename string) {
+func FinnAlle(filename string) {
 
 	// Open file for reading
 	file, err := os.Open(filename)
@@ -86,7 +86,6 @@ func FinnAlle (filename string) {
 
 			}
 
-
 		} else {
 			//fmt.Println("Det er ingen a i denne filen.\")
 			fmt.Printf("Der er ingen %q i denne filen.\n", Items[i])
@@ -99,10 +98,9 @@ func FinnAlle (filename string) {
 	fmt.Printf("Det er fjerdflest %q i denne filen og det er %d stk\n", fjerdeb, fjerde)
 	fmt.Printf("Det er femtflest %q i denne filen og det er %d stk\n", femteb, femte)
 
- }
+}
 
-func FinnAlletest (filename string) {
-
+func FinnAlletest(filename string) {
 
 	var biggest int = 0
 	var andre int = 0
@@ -142,10 +140,7 @@ func FinnAlletest (filename string) {
 		//fmt.Printf("Der er ingen %q i denne filen.\n", Items[i])
 		fmt.Println(bokstav)
 
-
 	}
-
-
 
 	for i := 0; i < len(Items); i++ {
 
@@ -173,33 +168,11 @@ func FinnAlletest (filename string) {
 								biggest = andre
 								bokstav = andreb
 								andre = 0
-
 							}
-
 						}
-
 					}
-
 				}
-
 			}
-
-
-		} else {
-			//fmt.Println("Det er ingen a i denne filen.\n")
-			//fmt.Printf("Der er ingen %q i denne filen.\n", Items[i])
-			//fmt.Println(bokstav)
 		}
 	}
-
-
-	//fmt.Println("\n")
-	//fmt.Printf("Det er flest %q i denne filen og det er %d stk\n", bokstav, biggest)
-	//fmt.Printf("Det er nestflest %q i denne filen og det er %d stk\n", andreb, andre)
-	//fmt.Printf("Det er tredjflest %q i denne filen og det er %d stk\n", tredjeb, tredje)
-	//fmt.Printf("Det er fjerdflest %q i denne filen og det er %d stk\n", fjerdeb, fjerde)
-	//fmt.Printf("Det er femtflest %q i denne filen og det er %d stk\n", femteb, femte)
-
 }
-
-
