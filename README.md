@@ -17,7 +17,7 @@ Navnliste: Abdikani Gureye, Brede Knutsen Meli, Eirik Aanestad Fintland, Jan Kev
  O g   e n   t i l   . . . 
  
 ( Bildet til høyre)
-54 65 73 74 65 72 20 6C 69 6E 6A 65 73 6B 69 66 74 2E ##0D ##0A 4F 67 20 65 6E 20 74 69 6C 20 2E 2E 2E ##0D ##0A 4F 67 20 65 6E 20 74 69 6C 20 2E 2E 2E ##0D ##0A## 4F 67 20 65 6E 20 74 69 6C 20 2E 2E 2E ##0D ##0A
+54 65 73 74 65 72 20 6C 69 6E 6A 65 73 6B 69 66 74 2E 0D 0A 4F 67 20 65 6E 20 74 69 6C 20 2E 2E 2E 0D 0A 4F 67 20 65 6E 20 74 69 6C 20 2E 2E 2E #D 0A 4F 67 20 65 6E 20 74 69 6C 20 2E 2E 2E 0D 0A
 
 [T e s t e  r   l i n j e s k i f t . 
 
@@ -58,9 +58,27 @@ For å kjøre filinfo filen benyttes flag. Filen tar parameter av ei fil, i vår
 ```
 filinfo.go -f asdf.txt
 ```
+Her kan vi detaljert data om filen og se hvilke rettigheter som tilhører.
+![Alt Text](https://github.com/IS105-Gruppe05/ICA04/blob/master/Bilder/2a.png)
+
+## b)
+Programmet kjøres i skyinstansen (ubuntu serveren).
+```
+go run filinfo -f /dev/stdin
+```
+```
+go run filinfo -f dev/ram0
+```
 
 
+![Alt Text](https://github.com/IS105-Gruppe05/ICA04/blob/master/Bilder/2b.png)
 
+/dev/stdin
+Dette er en device file/unix device file som har Unix permissions bits: Dcrw--w---- som tilsvarer Owner: read write, Group: write, Others: ingen tilgang. D står for “door”, c står for “device character”.
+/dev/ram0
+Dette er en devicefile men ikke en Unix character device file. Filen har en Unix permission bits: Drw-rw---- som tilsvarer Owner: read write, Group: read write, Others: ingen tilgang. D står for “door”.
+
+## c)
 
 
 
