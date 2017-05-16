@@ -79,7 +79,15 @@ Dette er en device file/unix device file som har Unix permissions bits: Dcrw--w-
 Dette er en devicefile men ikke en Unix character device file. Filen har en Unix permission bits: Drw-rw---- som tilsvarer Owner: read write, Group: read write, Others: ingen tilgang. D står for “door”.
 
 ## c)
+Kommando for å skjekke fileinfo i cmd, windows.
+```
+go run fileinfo.go -f mappenavn
+```
 
+Bilde av mappe info på windows:
+![Alt Text](https://github.com/IS105-Gruppe05/ICA04/blob/master/Bilder/2.2c.png)
+
+Ut i fra dette skjermbildet kan vi se at selve mappen ikke har en størrelse i følge filinfo, selv om mappen inneholdt en fil på 58B. Dette vil sannsynligvis si at win10 ikke teller selve mappen som en fil, men heller innholdet av mappen. Vi testet dette videre ved å lage en tom mappe på win10 og OSX, og kunne se at den tomme mappen vises som 0 bytes på win10, men 68 bytes på OSX. Dette er fordi OSX bygger på unix-prinsippet at alt er en fil, mens Windows ikke gjør dette.
 
 
 Vi ble ikke helt ferdige med oppgave 4e, så den vedlagte koden er uferdig.
