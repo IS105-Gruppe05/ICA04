@@ -95,7 +95,7 @@ func ReadBufferTest(filename string) {
 	}
 	bufferedReader := bufio.NewReader(file)
 
-	byteSlice := make([]byte, 4096)
+	byteSlice := make([]byte, 100)
 	byteSlice, err = bufferedReader.Peek(4096)
 	if err != nil {
 		log.Fatal(err)
