@@ -6,7 +6,6 @@ import (
 	"io"
 	"log"
 	"os"
-	//"strconv"
 )
 
 const Items = `ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz.,!?`
@@ -52,7 +51,6 @@ func FinnAlle(filename string) {
 	for i := 0; i < len(Items); i++ {
 
 		if bytes.Contains(byteSlice, []byte{Items[i]}) {
-			//fmt.Println("Det er", , " i denne filen.)
 			fmt.Printf("Det er %d %q i denne filen\n", bytes.Count(byteSlice, []byte{Items[i]}), Items[i])
 			v, _ := bytes.Count(byteSlice, []byte{Items[i]}), Items[i]
 			if v > femte {
@@ -87,7 +85,6 @@ func FinnAlle(filename string) {
 			}
 
 		} else {
-			//fmt.Println("Det er ingen a i denne filen.\")
 			fmt.Printf("Der er ingen %q i denne filen.\n", Items[i])
 		}
 	}
@@ -126,18 +123,11 @@ func FinnAlletest(filename string) {
 	}
 	size_of_slice := finfo.Size()
 
-	// The file.Read() function can read a
-	// tiny file into a large byte slice,
-	// but io.ReadFull() will return an
-	// error if the file is smaller than
-	// the byte slice
 	byteSlice := make([]byte, size_of_slice)
 
 	_, err = io.ReadFull(file, byteSlice)
 	if err != nil {
 		log.Fatal(err)
-		//fmt.Println("Det er ingen a i denne filen.\n")
-		//fmt.Printf("Der er ingen %q i denne filen.\n", Items[i])
 		fmt.Println(bokstav)
 
 	}
@@ -145,8 +135,6 @@ func FinnAlletest(filename string) {
 	for i := 0; i < len(Items); i++ {
 
 		if bytes.Contains(byteSlice, []byte{Items[i]}) {
-			//fmt.Println("Det er", , " i denne filen.)
-			//fmt.Printf("Det er %d %q i denne filen\n", bytes.Count(byteSlice, []byte{Items[i]}), Items[i])
 			v, _ := bytes.Count(byteSlice, []byte{Items[i]}), Items[i]
 			if v > femte {
 				femte = v
@@ -175,4 +163,5 @@ func FinnAlletest(filename string) {
 			}
 		}
 	}
+	file.Close()
 }

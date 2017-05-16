@@ -18,11 +18,6 @@ func FindNBytes(filename string) {
 		log.Fatal(err)
 	}
 
-	// The file.Read() function can read a
-	// tiny file into a large byte slice,
-	// but io.ReadFull() will return an
-	// error if the file is smaller than
-	// the byte slice
 	byteSlice := make([]byte, 4096)
 	bytesRead, err := file.Read(byteSlice)
 	if err != nil {
@@ -70,15 +65,10 @@ func FindNBytes(filename string) {
 								andre = 0
 
 							}
-
 						}
-
 					}
-
 				}
-
 			}
-
 		} else {
 
 			fmt.Printf("Der er ingen %q i denne filen.\n", Items[i])
@@ -157,18 +147,13 @@ func FindNBytesTest(filename string) {
 								biggest = andre
 								bokstav = andreb
 								andre = 0
-
 							}
-
 						}
-
 					}
-
 				}
-
 			}
-
 		}
+		file.Close()
 	}
 	return
 }
