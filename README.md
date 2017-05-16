@@ -92,5 +92,28 @@ Bilde av mappe info på windows:
 
 Ut i fra dette skjermbildet kan vi se at selve mappen ikke har en størrelse i følge filinfo, selv om mappen inneholdt en fil på 58B. Dette vil sannsynligvis si at win10 ikke teller selve mappen som en fil, men heller innholdet av mappen. Vi testet dette videre ved å lage en tom mappe på win10 og OSX, og kunne se at den tomme mappen vises som 0 bytes på win10, men 68 bytes på OSX. Dette er fordi OSX bygger på unix-prinsippet at alt er en fil, mens Windows ikke gjør dette.
 
+## Oppgave 3
+## a)
+
+Det finnes en rekke ulike metoder for å jobbe med filer i GO programmer. Ved hjelp av pakken “os” kan vi lese filer og redigere filer. Det nødvendig å sjekke for feil, når det er gjort så kan man minske en fils innhold  i minnet. Det er vanlig å ville styre hvordan og hvilke deler av en fil som skal leses, og da kan man enten lese stream av bytes med buffer eller uten buffer. Man kan også bruke Seek funksjon for å finne frem til et spesifikt punkt i filen og lese derfra, og vi kan velge å lese et gitt antall bytes.
+
+Vi kan bruke “Bufio” pakken til å lage en buffer skriver som gjør at vi kan jobbe med en buffer i minnet før vi skriver det over til disk. dette er praktisk hvis man ikke ønsker å bruke mye tid på diskens IO. Det er også nyttig hvis man vil skrive en byte om gangen og deretter lagre det i minne før man dumper alt til filen på èn gang, fremfor å skrive IO for hver byte. Vanlig buffer størrelse er på 4096 bytes, og minimum er på 16 bytes. 
+
+## b)
+Vi har laget tre metoder for å lese fra fil. Vi har muligheten til å lese et gitt antall bytes, Finne alle runes og linjeskift i en fil og lese med hjelp av buffer. Metodene krever parameter i form av tekst filer.
+
+Metoden vil skrive ut et gitt antall bytes av en fil.
+```
+go run freqnbytes_main.go pg100.txt
+```
+Metoden finner alle runes og linjeskift i en fil.
+```
+go run finnbokstav_main.go middels.txt
+```
+Metoden leser med hjelp av buffer.
+```
+go run freqbuffer_main.go
+```
+
 
 Vi ble ikke helt ferdige med oppgave 4e, så den vedlagte koden er uferdig.
