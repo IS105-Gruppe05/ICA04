@@ -46,7 +46,6 @@ func FindNBytes(filename string) {
 	for i := 0; i < len(Items); i++ {
 
 		if bytes.Contains(byteSlice, []byte{Items[i]}) {
-			//fmt.Println("Det er", , " i denne filen.)
 			fmt.Printf("Det er %d %q i denne filen\n", bytes.Count(byteSlice, []byte{Items[i]}), Items[i])
 			v, _ := bytes.Count(byteSlice, []byte{Items[i]}), Items[i]
 			if v > femte {
@@ -81,7 +80,7 @@ func FindNBytes(filename string) {
 			}
 
 		} else {
-			//fmt.Println("Det er ingen a i denne filen.\")
+
 			fmt.Printf("Der er ingen %q i denne filen.\n", Items[i])
 		}
 	}
@@ -94,8 +93,6 @@ func FindNBytes(filename string) {
 	return
 }
 
-
-
 func FindNBytesTest(filename string) {
 
 	// Open file for reading
@@ -105,18 +102,11 @@ func FindNBytesTest(filename string) {
 		log.Fatal(err)
 	}
 
-	// The file.Read() function can read a
-	// tiny file into a large byte slice,
-	// but io.ReadFull() will return an
-	// error if the file is smaller than
-	// the byte slice
 	byteSlice := make([]byte, 4096)
 	bytesRead, err := file.Read(byteSlice)
 	if err != nil {
 		log.Fatal(err)
 	}
-	//log.Printf("Number of bytes read: %d\n", bytesRead)
-	//log.Printf("Data read: %s\n", byteSlice)
 
 	var biggest int = 0
 	var andre int = 0
@@ -130,7 +120,7 @@ func FindNBytesTest(filename string) {
 	var fjerdeb byte
 	var femteb byte
 
-	if err!= nil {
+	if err != nil {
 		fmt.Println("")
 		fmt.Printf("Det er flest av %q i denne filen og det er %d stk\n", bokstav, biggest)
 		fmt.Printf("Det er nest flest av %q i denne filen og det er %d stk\n", andreb, andre)
@@ -145,8 +135,7 @@ func FindNBytesTest(filename string) {
 	for i := 0; i < len(Items); i++ {
 
 		if bytes.Contains(byteSlice, []byte{Items[i]}) {
-			//fmt.Println("Det er", , " i denne filen.)
-			//fmt.Printf("Det er %d %q i denne filen\n", bytes.Count(byteSlice, []byte{Items[i]}), Items[i])
+
 			v, _ := bytes.Count(byteSlice, []byte{Items[i]}), Items[i]
 			if v > femte {
 				femte = v
@@ -179,16 +168,7 @@ func FindNBytesTest(filename string) {
 
 			}
 
-		} else {
-			//fmt.Println("Det er ingen a i denne filen.\")
-			//fmt.Printf("Der er ingen %q i denne filen.\n", Items[i])
 		}
 	}
-	//fmt.Println("")
-	//fmt.Printf("Det er flest av %q i denne filen og det er %d stk\n", bokstav, biggest)
-	//fmt.Printf("Det er nest flest av %q i denne filen og det er %d stk\n", andreb, andre)
-	//fmt.Printf("Det er tredje flest av %q i denne filen og det er %d stk\n", tredjeb, tredje)
-	//fmt.Printf("Det er fjerde flest av %q i denne filen og det er %d stk\n", fjerdeb, fjerde)
-	//fmt.Printf("Det er femte flest av %q i denne filen og det er %d stk\n", femteb, femte)
 	return
 }

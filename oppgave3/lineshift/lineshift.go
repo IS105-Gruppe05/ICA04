@@ -1,4 +1,4 @@
-package runecount
+package lineshift
 
 import (
 	"bytes"
@@ -29,17 +29,20 @@ func FileToByteslice(filename string) []byte {
 	// the byte slice
 	byteSlice := make([]byte, size_of_slice)
 
-	lineBreak := ([]byte("\x0A"))
+	lineBreak2 := ([]byte("\x0A"))
+	lineBreak1 := ([]byte("\x0D\x0A"))
 
 	_, err = io.ReadFull(file, byteSlice)
 	if err != nil {
 		log.Fatal(err)
 	}
 	fmt.Println()
-	if bytes.Contains(byteSlice, lineBreak) {
-		fmt.Println("Det er", bytes.Count(byteSlice, lineBreak), "linjeskift i denne filen.")
+	if bytes.Contains(byteSlice, lineBreak1) {
+		fmt.Println("Det er", bytes.Count(byteSlice, lineBreak1), "linjeskift i denne filen.(Carriage return og lineshift)")
+	} else if bytes.Contains(byteSlice, lineBreak2) {
+		fmt.Println("Det er", bytes.Count(byteSlice, lineBreak2), "linjeskift i denne filen.(Lineshift)")
 	} else {
-		fmt.Println("Det er ingen linjeskift i denne filen.")
+		fmt.Println("Det er ingen linjeskift i filen.")
 	}
 	return byteSlice
 }
