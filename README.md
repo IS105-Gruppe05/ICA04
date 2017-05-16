@@ -128,4 +128,59 @@ go test -bench=.
 Som vi ser på bildene vil det være raskere å lese filer med hjelp av buffer. Om vi ser på funksjonen finnBokstav ser vi at på store filer bruker den veldig lang tid. Dette fordi denne leser gjennom hele filen og ikke bare en viss kapasitet eller antall bytes. Dette resulterer i at funksjonen bare benchmarker stor fil 20 ganger.
 
 
+
+## Oppgave 4
+## a)
+
+Antall fakulteter: 6
+Antall studenter(2014): 
+Helse og idrett:			1829
+Humaniora og pedagogikk:		1525
+Kunstfag:				420
+Teknologi og realfag:			2166
+Lærerutdanning:			1506
+Økonomi og samfunnsvitenskap:	3093
+totalt = 				10´539
+
+Tallene under er rundet av til nærmeste hele prosent
+Helse og idrett:			1829 = 17%
+Humaniora og pedagogikk:		1525 = 14%
+Kunstfag:				420 = 4%
+Teknologi og realfag:			2166 = 21%
+Lærerutdanning:			1506 = 14%
+Økonomi og samfunnsvitenskap:    	3093 = 30%
+total prosent: 				100%
+
+På bakgrunn av tallene ovenfor kan man for eksempel komme frem til at det er 17% sannsynlighet at en tilfeldig student tilhører Helse og idrett.
+
+
+## b)
+*Når du lærer (får informasjon) om at en tilfeldig valgt student hører til et spesifikt fakultet, for hvilket fakultet får du MINST informasjon?*
+
+Kunstfaget, er det fakultetet man får minst informasjon fra (4%). Eller får du minst informasjon fra det største fakultetet, altså økonomi??
+
+## c)
+ Binært tre for huffmankode nedenfor med kodelengde for hvert fakultet.
+
+![Alt Text](https://github.com/IS105-Gruppe05/ICA04/blob/master/Bilder/4.1c.png)
+
+![Alt Text](https://github.com/IS105-Gruppe05/ICA04/blob/master/Bilder/4.2c.png)
+
+Helse og idrett               A:001
+Humaniora og pedagogikk       B:000
+Kunstfag 			                 	C:111
+Teknologi og realfag		       	D:10
+Lærerutdanning 	        		    E:110
+Økonomi og samfunnsvitenskap 	F:01
+
+## d)
+*Hva er gjennomsnittslengden for en melding som inneholder fakultets koder for 100 tilfeldig valgte studenter? Beregn og forklar.*
+
+Hvis vi følger sannsynligheten, blir antallet studenter, eller bokstaver:
+17A, 14B, 4C, 21D, 14E, 30F (fant ut hvor stor antall % fra hvert fakultet tidligere).
+AKA: 17x”001”, 14x”000”, 4x”111”, 21x”10”, 14x”110”, 31x”01”(Antallet*bits, så A=17*3 bits)
+AKA: 51+42+12+42+42+62
+AKA: 251 (bits/bytes/tall)
+
+
 Vi ble ikke helt ferdige med oppgave 4e, så den vedlagte koden er uferdig.
