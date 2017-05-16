@@ -1,13 +1,9 @@
 package main
 
-import (
-	"os"
-
-	"./runecount"
-)
+import "./lineshift"
+import "os"
 
 func main() {
 	var a = os.Args[1]
-	runecount.FindAll(a)
-	runecount.FileToByteslice(a)
+	lineshift.FileToByteslice(a)
 }
