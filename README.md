@@ -126,4 +126,6 @@ go test -bench=.
 ![Alt Text](https://github.com/IS105-Gruppe05/ICA04/blob/master/Bilder/3c.png)
 
 Som vi ser på bildene vil det være raskere å lese filer med hjelp av buffer. Om vi ser på funksjonen finnBokstav ser vi at på store filer bruker den veldig lang tid. Dette fordi denne leser gjennom hele filen og ikke bare en viss kapasitet eller antall bytes. Dette resulterer i at funksjonen bare benchmarker stor fil 20 ganger.
+
+
 Vi ble ikke helt ferdige med oppgave 4e, så den vedlagte koden er uferdig.
