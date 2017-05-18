@@ -178,7 +178,7 @@ Lærerutdanning 	        		    E:110
 
 Hvis vi følger sannsynligheten, blir antallet studenter, eller bokstaver:
 17A, 14B, 4C, 21D, 14E, 30F (fant ut hvor stor antall % fra hvert fakultet tidligere).
-AKA: 17x”001”, 14x”000”, 4x”111”, 21x”10”, 14x”110”, 30x”01”(Antallet*bits, så A=17*3 bits)
+AKA: 17x”001”, 14x”000”, 4x”111”, 21x”10”, 14x”110”, 30x”01”(Antalletxbits, så A=17x3 bits)
 AKA: 51+42+12+42+42+60
 AKA: 249 (bits)
 
