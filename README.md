@@ -178,13 +178,13 @@ Lærerutdanning 	        		    E:110
 
 Hvis vi følger sannsynligheten, blir antallet studenter, eller bokstaver:
 17A, 14B, 4C, 21D, 14E, 30F (fant ut hvor stor antall % fra hvert fakultet tidligere).
-AKA: 17x”001”, 14x”000”, 4x”111”, 21x”10”, 14x”110”, 31x”01”(Antallet*bits, så A=17*3 bits)
-AKA: 51+42+12+42+42+62
-AKA: 251 (bits/bytes/tall)
+AKA: 17x”001”, 14x”000”, 4x”111”, 21x”10”, 14x”110”, 30x”01”(Antallet*bits, så A=17*3 bits)
+AKA: 51+42+12+42+42+60
+AKA: 249 (bits/bytes/tall)
 
 ## e)
 
-Vi ble ikke helt ferdige med oppgave 4e, så den vedlagte koden er uferdig.
+Vi greide ikke å lage kode som kan både dekode og enkode huffman, men via litt "hjemmesnekring" så har vi fått til et go-program som dekoder en hardkoda string av binære tall. Vi valgte å bruke scanner for å lese hver rune, sjekker om det er 0 eller 1, deretter til neste og sjekker om den er 0 eller 1, osv.
 
 
     if oppgave4e.works() { 
