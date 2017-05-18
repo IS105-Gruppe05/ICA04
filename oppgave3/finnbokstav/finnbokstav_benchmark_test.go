@@ -1,9 +1,8 @@
 package oppg3
 
 import (
-	//"fmt"
+	
 	"testing"
-	//"reflect"
 	"math/rand"
 	"time"
 )
