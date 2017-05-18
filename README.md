@@ -182,13 +182,14 @@ AKA: 17x”001”, 14x”000”, 4x”111”, 21x”10”, 14x”110”, 31x”0
 AKA: 51+42+12+42+42+62
 AKA: 251 (bits/bytes/tall)
 
+## e)
 
 Vi ble ikke helt ferdige med oppgave 4e, så den vedlagte koden er uferdig.
 
 
-    If oppgave 4E works { 
-        "We are all happy"
+    if oppgave4e.works() { 
+       fmt.Println("We are all happy")
         }
-    Else {
-        "Sorry, we tried"
+    else {
+        fmt.Println("Sorry, we tried")
         }
