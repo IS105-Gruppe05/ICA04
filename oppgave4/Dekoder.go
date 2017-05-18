@@ -31,14 +31,14 @@ func main() {
 			if s.Text() =="0"{
 				s.Scan()
 				if s.Text() == "1" {
-					fmt.Println("001")
+					//fmt.Println("001")
 					Helse++
 				}else if s.Text() == "0"{
-					fmt.Println("000")
+					//fmt.Println("000")
 					Pedag++
 				}
 			}else if s.Text() == "1" {
-				fmt.Println("01")
+				//fmt.Println("01")
 				Økonomi++
 			}
 
@@ -48,16 +48,16 @@ func main() {
 			if s.Text() == "1" {
 				s.Scan()
 				if s.Text() == "1"{
-					fmt.Println("111")
+					//fmt.Println("111")
 					Kunst++
 				}else if s.Text() == "0"{
-					fmt.Println("110")
+					//fmt.Println("110")
 					Lærer++
 
 
 			}
 			}else if s.Text() == "0"{
-				fmt.Println("10")
+				//fmt.Println("10")
 				Tek++
 			}
 		}
@@ -69,31 +69,3 @@ func main() {
 	fmt.Println("Lærerutdanning: " , Lærer)
 	fmt.Println("Økonomi og samfunnsvitenskap: " , Økonomi)
 }
-/*func main() {
-
-
-
-str := "001001001001001001001001001001001001001001001001001" +
-"00000000000000000000000000000000000000000011111111111110101010101010101" +
-"01010101010101010101010101101101101101101101101101101101101101101100101" +
-"0101010101010101010101010101010101010101010101010101010101"
-
-subStr1 := "001" //Teller 2 for mange elever.
-//subStr2 := "000"
-//subStr3 := "111"
-//subStr4 := "10"
-//subStr5 := "110"
-//subStr6 := "01"
-
-//for i := 0; i < len(str); i++ {
-
-if strings.Contains(str, "001") {
-}
-		fmt.Printf("Helse har %d elever\n", strings.Count(str, subStr1))
-
-}
-
-//}
-
-
-*/
