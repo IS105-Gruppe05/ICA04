@@ -191,5 +191,5 @@ Vi ble ikke helt ferdige med oppgave 4e, så den vedlagte koden er uferdig.
        fmt.Println("We are all happy")
         }
     else {
-        fmt.Println("Sorry, we tried")
+       fmt.Println("Sorry, we tried")
         }
