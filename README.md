@@ -188,13 +188,12 @@ Vi greide ikke å lage kode som kan både dekode og enkode huffman, men via litt
 
 
     if oppgave4e.works() { 
-       if scanner = 1 {
-          happy = 1
-          }
-       else {
-         happy = 0
-         }
-        }
-    else {
+       Gruppe5 = B-)
+       if janis = :) {
+          Gruppe5 = :)
+            }else if janis = :/ {
+                 Gruppe5 = :O
+            }
+        }else {
        fmt.Println("Sorry, we tried")
         }
