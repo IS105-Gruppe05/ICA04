@@ -184,3 +184,11 @@ AKA: 251 (bits/bytes/tall)
 
 
 Vi ble ikke helt ferdige med oppgave 4e, så den vedlagte koden er uferdig.
+
+
+If oppgave 4E works { 
+We are all happy
+}
+Else {
+Sorry, we tried
+}
