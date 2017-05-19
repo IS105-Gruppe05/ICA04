@@ -39,9 +39,9 @@ Som vi kan se i text1.txt er byten 0D lagt til 4 ganger, noe som forklarer hvorf
 
 
 ## b)
-Koden kjøres med en innlagt fil (asdf.txt) i programmet.
+Koden kjøres med fil som parameter, kan velge: text1.txt / text2.txt .
 ```
-go run main.go
+go run main.go text1.txt
 ```
 
 Linjeskift m/ punktum, mac: Vi ser tegnet 0A  fordi tekstfiler opprettet i unix og nyere mac versjoner kun bruker line feed, mens de i de første mac versjonene kun brukte  carriage return (0D) i tillegg til 0A.
@@ -112,11 +112,11 @@ go run finnbokstav_main.go middels.txt
 ```
 Metoden leser med hjelp av buffer.
 ```
-go run freqbuffer_main.go
+go run freqbuffer_main.go pg100.txt
 ```
 
 ## c)
-Vi har laget benchmark tester for lesing av filer. Vi tester lesing med buffer, et gitt antall bytes og totalt antall runer i filen. For å kunne bechmarke må du være lokalisert i riktig mappe som filene (den filen du vil teste).
+Vi har laget benchmark tester for lesing av filer. Vi tester lesing med buffer, et gitt antall bytes og totalt antall runer i filen. For å kunne bechmarke må du være lokalisert i riktig mappe som filene (den filen du vil teste). Det vil totalt blir tre forskjellige benchmark tester å kjøre (finnbokstav, freqbuffer, freqnbytes).
 
 Kommando for å kjøre benchmark tester.
 ```
@@ -157,7 +157,8 @@ På bakgrunn av tallene ovenfor kan man for eksempel komme frem til at det er 17
 ## b)
 *Når du lærer (får informasjon) om at en tilfeldig valgt student hører til et spesifikt fakultet, for hvilket fakultet får du MINST informasjon?*
 
-Kunstfaget, er det fakultetet man får minst informasjon fra (4%). Eller får du minst informasjon fra det største fakultetet, altså økonomi??
+Vi får minst informasjon fra de to største fakultetene, altså økonomi og samfunnsvitenskap & teknologi og realfag. Grunnen til dette er at de er størst og kommer først. Informasjonen er ikke delt opp så mange ganger som i for eksempel kunstfag på 4%.
+
 
 ## c)
  Binært tre for huffmankode nedenfor med kodelengde for hvert fakultet.
