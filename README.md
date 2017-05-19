@@ -58,6 +58,7 @@ Bilde for linjeskift windows: Dette er samme fil som i illustrasjonen over. Side
 ## Oppgave 2
 ## a)
 For å kjøre filinfo filen benyttes flag. Filen tar parameter av ei fil, i vårt tilfelle asdf.txt.
+Koden er inspirert fra https://github.com/crippling-depression/is105-ica04/blob/master/oppgave2/main.go som er koden til gruppe 4. Men denne har vi gjort om til vår egen.
 ```
 filinfo.go -f asdf.txt
 ```
